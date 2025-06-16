@@ -8,11 +8,11 @@ import (
 	"github.com/mgechev/revive/lint"
 )
 
-// RangeRule lints given else constructs.
+// RangeRule prevents redundant variables when iterating over a collection.
 type RangeRule struct{}
 
 // Apply applies the rule to given file.
-func (r *RangeRule) Apply(file *lint.File, _ lint.Arguments) []lint.Failure {
+func (*RangeRule) Apply(file *lint.File, _ lint.Arguments) []lint.Failure {
 	var failures []lint.Failure
 
 	onFailure := func(failure lint.Failure) {
@@ -25,7 +25,7 @@ func (r *RangeRule) Apply(file *lint.File, _ lint.Arguments) []lint.Failure {
 }
 
 // Name returns the rule name.
-func (r *RangeRule) Name() string {
+func (*RangeRule) Name() string {
 	return "range"
 }
 
