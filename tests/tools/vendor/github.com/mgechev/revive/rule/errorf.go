@@ -9,11 +9,11 @@ import (
 	"github.com/mgechev/revive/lint"
 )
 
-// ErrorfRule lints given else constructs.
+// ErrorfRule suggests using `fmt.Errorf` instead of `errors.New(fmt.Sprintf())`.
 type ErrorfRule struct{}
 
 // Apply applies the rule to given file.
-func (r *ErrorfRule) Apply(file *lint.File, _ lint.Arguments) []lint.Failure {
+func (*ErrorfRule) Apply(file *lint.File, _ lint.Arguments) []lint.Failure {
 	var failures []lint.Failure
 
 	fileAst := file.AST
@@ -32,7 +32,7 @@ func (r *ErrorfRule) Apply(file *lint.File, _ lint.Arguments) []lint.Failure {
 }
 
 // Name returns the rule name.
-func (r *ErrorfRule) Name() string {
+func (*ErrorfRule) Name() string {
 	return "errorf"
 }
 
@@ -69,7 +69,7 @@ func (w lintErrorf) Visit(n ast.Node) ast.Visitor {
 	}
 
 	failure := lint.Failure{
-		Category:   "errors",
+		Category:   lint.FailureCategoryErrors,
 		Node:       n,
 		Confidence: 1,
 		Failure:    fmt.Sprintf("should replace %s(fmt.Sprintf(...)) with %s.Errorf(...)", w.file.Render(se), errorfPrefix),
