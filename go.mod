@@ -9,7 +9,8 @@ require (
 	github.com/containers/image/v5 v5.20.0
 	github.com/containers/ocicrypt v1.1.3
 	github.com/containers/storage v1.39.0
-	github.com/docker/distribution v2.8.1+incompatible
+	github.com/distribution/reference v0.6.0 // indirect
+	github.com/docker/distribution v2.8.3+incompatible
 	github.com/docker/docker v20.10.14+incompatible
 	github.com/docker/go-units v0.4.0
 	github.com/docker/libnetwork v0.8.0-dev.2.0.20190625141545-5a177b73e316

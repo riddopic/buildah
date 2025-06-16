@@ -220,9 +220,10 @@ github.com/cyphar/filepath-securejoin
 github.com/davecgh/go-spew/spew
 # github.com/disiqueira/gotree/v3 v3.0.2
 github.com/disiqueira/gotree/v3
-# github.com/docker/distribution v2.8.1+incompatible
+# github.com/distribution/reference v0.6.0
+github.com/distribution/reference
+# github.com/docker/distribution v2.8.3+incompatible
 github.com/docker/distribution
-github.com/docker/distribution/digestset
 github.com/docker/distribution/metrics
 github.com/docker/distribution/reference
 github.com/docker/distribution/registry/api/errcode
@@ -397,6 +398,7 @@ github.com/onsi/gomega/matchers/support/goraph/util
 github.com/onsi/gomega/types
 # github.com/opencontainers/go-digest v1.0.0
 github.com/opencontainers/go-digest
+github.com/opencontainers/go-digest/digestset
 # github.com/opencontainers/image-spec v1.0.3-0.20211202193544-a5463b7f9c84 => github.com/opencontainers/image-spec v1.0.2-0.20211123152302-43a7dee1ec31
 github.com/opencontainers/image-spec/specs-go
 github.com/opencontainers/image-spec/specs-go/v1
