@@ -1,6 +1,6 @@
-// +build !windows
+//go:build !windows
 
-package system // import "github.com/docker/docker/pkg/system"
+package system
 
 import (
 	"time"
